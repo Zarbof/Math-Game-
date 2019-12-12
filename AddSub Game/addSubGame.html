@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Math Game: Addition and Subtraction Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="addSubGame.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+    
+<body id="body">
+    
+    <button type="button" id="continue" class="continue" onclick="go()"></button>
+            
+    <script>
+        function go(){
+            var choose = Math.floor((Math.random() * 2));
+            if (choose == 0) window.location.href="aProblem1.html";
+            if (choose == 1) window.location.href="sProblem1.html";
+        }
+    </script>
+</body>
+    
+</html>

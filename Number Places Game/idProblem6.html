@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Math Game: Number Places Game: Problem 6</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="idProblem6.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Kalam:700&display=swap" rel="stylesheet">    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body class="body">
+    
+        <div class="content">
+            
+            <span id="question"></span>
+            <button type="button" id="op1" onclick="result=0"></button>
+            <button type="button" id="op2" onclick="result=1"></button>
+            <button type="button" id="op3" onclick="result=2"></button>
+            <script>
+                var num, one, two, three, result, question, place;
+                num = Math.floor((Math.random() * 3));
+                one = Math.floor((Math.random() * 9) + 1);    
+                two = Math.floor((Math.random() * 10));
+                three = Math.floor((Math.random() * 10));
+                
+                if(num == 0) place = "HUNDREDS";
+                if(num == 1) place = "TENS";
+                if(num == 2) place = "ONES";
+                
+                question = "What is in the " + place + " place of " + one + two + three + "?";
+                
+                document.getElementById("question").innerHTML = question;
+                document.getElementById("op1").innerHTML = one;        
+                document.getElementById("op2").innerHTML = two;
+                document.getElementById("op3").innerHTML = three;
+            </script>
+    
+            <button type="button" id="checkButton" class="checkButton" onclick="check()"></button>
+            <button type="button" id="nextButton" class="nextButton" onclick="go()"></button>
+    
+            <span id="msg"></span>
+            <span id="go"></span>
+    
+            <script>
+                var checked, pressed;
+                function check() {
+                    checked = true;
+                    var answer, msg;
+                    answer = document.getElementById('answer');
+                    if (num == result) {
+                        msg = "CORRECT!";
+                        newScore = JSON.parse(window.localStorage.getItem('score'))
+                        newScore+= 1; //adds 1 to overall score stored in variable score
+                        window.localStorage.setItem('score', newScore); //stores increased value back into localStorage
+                    } else {
+                        if(num == 0) msg = "INCORRECT, it is " + one;
+                        if(num == 1) msg = "INCORRECT, it is " + two;
+                        if(num == 2) msg = "INCORRECT, it is " + three;
+                    }
+                    document.getElementById("msg").innerHTML = msg;
+                }
+        
+                function go(){
+                    if(checked == true) window.location.href="idProblem7.html";
+                }
+            </script>
+            
+        </div>
+</body>
+       
+</html>

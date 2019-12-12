@@ -1,0 +1,36 @@
+This Code will reroute to the game if login was succesful, or back to the main page if not succesful
+
+
+<<?php
+$x = 7;
+if($x < 6){
+echo "<a href='".loginSystemTrue."'>Link</a>";
+}
+else{
+echo "<a href='".loginSystemFalse."'>Link</a>";
+}
+ ?>
+
+
+ $sql = "SELECT username, password FROM Students";
+ $result = mysqli_query($conn, $sql);
+
+ if (mysqli_num_rows($result) > 0) {
+     // output data of each row
+     while($row = mysqli_fetch_assoc($result)) {
+         if($row[username] == $_GET[username]){
+           echo "$_GET[username]";
+
+         }
+         else{
+           echo "$_GET[username]";
+         }
+         //echo "Name: " . $row["username"]. " " . $row["password"]. "<br>";
+     }
+ } else {
+     echo "0 results";
+ }
+
+ mysqli_close($conn);
+
+ https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data

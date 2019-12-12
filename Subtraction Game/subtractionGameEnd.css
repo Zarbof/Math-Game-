@@ -1,0 +1,28 @@
+.continue {
+    width: 33%;
+    height: 7%;
+    border-radius: 40px;
+    background: none;
+    border: none;
+    
+    position: absolute;
+    top: 87.5%;
+    left: 62.5%;
+    
+}
+
+#score {
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    
+    font-family: 'Kalam';    
+    font-size: 15vmin;
+    color: black;
+    text-shadow: -3px 0 white, 0 3px white, 3px 0 white, 0 -3px white;
+}
+
+body {
+    background: url("SubtractionGameEnd.PNG") no-repeat top left fixed;
+    background-size: 100% 100%;
+}

@@ -1,0 +1,8 @@
+<body>
+<p>Successful Login</p>
+<p>redirecting...</p>
+<!-- <a href="../index.html">Click here to return to Login</a> -->
+<meta http-equiv="refresh" content="0; URL='../Home Page/homePage.html'"/>
+
+</body>
+</html>

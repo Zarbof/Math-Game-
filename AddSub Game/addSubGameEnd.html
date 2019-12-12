@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Math Game: Addition Subtraction Game End</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="addSubGameEnd.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body id="body">
+        <a href="../Home%20Page/homePage.html"><button type="button" id="continue" class="continue"></button>
+
+        <span id="score"></span>
+        <script>
+            var finalScore = window.localStorage.getItem('score');
+            document.getElementById("score").innerHTML = finalScore;
+        </script>
+
+</body>
+
+</html>

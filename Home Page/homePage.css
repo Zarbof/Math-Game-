@@ -1,0 +1,69 @@
+.additionButton {
+    width: 17.6%;
+    height: 31%;
+    border-radius: 60px;
+    background: none;
+    border: none;
+    
+    position: absolute;
+    top: 37%;
+    left: 40%;
+    
+}
+
+.subtractionButton {
+    width: 14.5%;
+    height: 25.5%;
+    border-radius: 65px;
+    background: none;
+    border: none;
+    
+    position: absolute;
+    top: 5.5%;
+    left: 83%;
+    
+}
+
+.addSubButton {
+    width: 16.5%;
+    height: 29%;
+    border-radius: 70px;
+    background: none;
+    border: none;
+    
+    position: absolute;
+    top: 27%;
+    left: 64.5%;
+    
+}
+
+.idButton {
+    width: 17.6%;
+    height: 30%;
+    border-radius: 70px;
+    background: none;
+    border: none;
+    
+    position: absolute;
+    top: 59%;
+    left: 77.6%;
+    
+}
+
+.reportButton {
+    width: 14.5%;
+    height: 25%;
+    border-radius: 70px;
+    background: none;
+    border: none;
+    
+    position: absolute;
+    top: 70.5%;
+    left: 54.5%;
+    
+}
+
+body {
+    background: url("HomePage.PNG") no-repeat top left fixed;
+    background-size: 100% 100%;
+}

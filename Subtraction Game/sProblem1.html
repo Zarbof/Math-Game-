@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Math Game: Subtraction Game: Problem 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="sProblem1.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Kalam:700&display=swap" rel="stylesheet">    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body class="body">
+    
+        <div class="content">
+            
+            <button type="button" id="op1"></button>
+            <button type="button" id="op2"></button>
+            <script>
+                var one, two, result, question;    
+                one = Math.floor((Math.random() * 11));    
+                two = Math.floor((Math.random() * 11));
+                if (two > one) {
+                    var temp = one;
+                    one = two;
+                    two = temp;
+                }
+                result = one - two;
+                document.getElementById("op1").innerHTML = one;        
+                document.getElementById("op2").innerHTML = two;
+            </script>
+    
+            <input type="text" class="textBox" name="answer" id="answer"/>
+            <button type="button" id="checkButton" class="checkButton" onclick="check()"></button>
+            <button type="button" id="nextButton" class="nextButton" onclick="go()"></button>
+    
+            <span id="msg"></span>
+            <span id="go"></span>
+    
+            <script>
+                var checked;
+                function check() {
+                    checked = true;
+                    var answer, msg;
+                    answer = document.getElementById('answer');
+                    if (answer.value == result) {
+                        msg = "CORRECT!";
+                        window.localStorage.setItem('score', '1');  //stores score variable for correct
+                    } else {
+                        msg = "INCORRECT, " + one + " - " + two + " = " + result;
+                        window.localStorage.setItem('score', '0');  //stores score variable for incorrect
+                    }
+                    document.getElementById("msg").innerHTML = msg;
+                }
+        
+                function go(){
+                    if(checked == true) window.location.href="sProblem2.html";
+                }
+            </script>
+            
+        </div>
+</body>
+       
+</html>

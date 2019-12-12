@@ -1,0 +1,17 @@
+.continue {
+    width: 27%;
+    height: 6%;
+    border-radius: 40px;
+    background: none;
+    border: none;
+    
+    position: absolute;
+    top: 25.5%;
+    left: 67%;
+    
+}
+
+body {
+    background: url("Start.PNG") no-repeat top left fixed;
+    background-size: 100% 100%;
+}
